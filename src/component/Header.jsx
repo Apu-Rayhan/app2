@@ -1,12 +1,14 @@
 import React from 'react'
+import Nav from './Nav'
+import Router from './Router'
 
 const Header = () => {
   return (
     <>
-
-    <h4 className='text-green-400 bg-slate-600 w-11/12 m-auto '> Tailwind css</h4>
-    
-    
+    <div className='w-full h-14 bg-indigo-900 text-white flex '>
+    <Nav/>
+    </div>
+    <Router/>
     </>
   )
 }
