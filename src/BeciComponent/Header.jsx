@@ -5,7 +5,7 @@ import Router from "./Router";
 const Header = () => {
   return (
     <>
-      <div className="w-full h-14 bg-indigo-900 text-white flex ">
+      <div className="w-full h-14 bg-indigo-900 text-white flex sticky top-0 ">
         <Nav />
       </div>
       <Router />

@@ -5,3 +5,7 @@
 body{
     background-color: rgb(139, 136, 136);
 }
+
+.active{
+    border-bottom: 2px solid white;
+}
