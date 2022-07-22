@@ -1,5 +1,6 @@
 import React from "react";
 import NameCom from "../Component/NameCom";
+import Section2 from "../Component/Section2";
 
 
 const Home = () => {
@@ -8,18 +9,10 @@ const Home = () => {
 
     
     <NameCom props={{work:'Hay there, I am Web Developer', para:'simply dummy text of the printing and typesetting industry.'}}/>
+
+    <Section2/>
     
     
-   
-      <div>Home</div>
-      Failed to load resource: net::ERR_FAILED
-      
-      
-
-      
-
-      
-
       
     </>
   );
