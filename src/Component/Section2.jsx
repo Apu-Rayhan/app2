@@ -7,7 +7,6 @@ const Section2 = () => {
         <ServiceCard props={{serviceName:'web developer' , serviceDeteles:'ddjffie kdjfioef  djiueiof' }}/>
         <ServiceCard props={{serviceName:'web developer' , serviceDeteles:'ddjffie kdjfioef  djiueiof' }}/>
         <ServiceCard props={{serviceName:'web developer' , serviceDeteles:'ddjffie kdjfioef  djiueiof' }}/>
-        
       </section>
     </>
   );
