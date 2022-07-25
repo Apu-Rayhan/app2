@@ -40,11 +40,11 @@ const Section2 = () => {
 const ServiceCard = ({ props }) => {
   return (
     <>
-      <div className=" border w-1/4 h-80  rounded-md   ">
-        <h1 className=" font-black text-center relative top-1/4 text-2xl text-red-600  ">
+      <div className=" border w-1/4 h-80  rounded-md  ">
+        <h1 className=" w-full border h-20 mt-5  font-black text-center text-2xl text-red-600  ">
           {props.serviceName}
         </h1>
-        <p className=" text-center relative top-1/3 ">{props.serviceDeteles}</p>
+        <p className=" text-center border mt-2  ">{props.serviceDeteles}</p>
       </div>
     </>
   );
