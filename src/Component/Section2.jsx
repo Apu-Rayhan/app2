@@ -6,9 +6,7 @@ const Section2 = () => {
     <>
       <section className=" border w-full hight mt-2    ">
         <div className=" border bg-slate-600 mt-4  w-full h-20 justify-center items-center flex">
-          
-          <SectionName name=" Our Servive"/>
-          
+          <SectionName name=" Our Servive" />
         </div>
         <div className=" flex space-x-4 justify-around items-center mt-4  ">
           <ServiceCard
