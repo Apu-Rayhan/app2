@@ -1,11 +1,13 @@
 import React from "react";
+import SectionName from "./SectionName";
 
 const Section2 = () => {
   return (
     <>
       <section className=" border w-full hight mt-2    ">
         <div className=" border bg-slate-600 mt-4  w-full h-20 justify-center items-center flex">
-          <div className=' bg-black h-1 w-96'></div><h1 className=" text-3xl font-bold">Our Service </h1><div className=' bg-black h-1 w-96'></div>
+          
+          <SectionName name=" Our Servive"/>
           
         </div>
         <div className=" flex space-x-4 justify-around items-center mt-4  ">
@@ -41,7 +43,7 @@ const Section2 = () => {
 const ServiceCard = ({ props }) => {
   return (
     <>
-      <div className=" border w-1/4 h-80  rounded-md  ">
+      <div className=" border w-1/4 h-80  rounded-md bg-slate-500 ">
         <h1 className=" w-full border h-14 mt-5  font-bold text-center text-2xl text-red-600  ">
           {props.serviceName}
         </h1>
