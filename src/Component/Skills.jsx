@@ -12,11 +12,11 @@ const Skills = () => {
           </div>
 
           <div className="border m-auto mt-5 w-2/4">
-            <ProgressBar witd="w-11/12" color="bg-lime-500" html="Html" />
-            <ProgressBar witd="w-11/12" color="bg-red-500" html="CSS" />
-            <ProgressBar witd="w-2/3" color="bg-red-300" html="Javascript" />
-            <ProgressBar witd="w-2/3" color="bg-red-200" html="React js " />
-            <ProgressBar witd="w-2/3" color="bg-red-100" html="Node js " />
+            <ProgressBar witd="w-11/12" color="bg-indigo-900" html="Html" />
+            <ProgressBar witd="w-11/12" color="bg-indigo-700" html="CSS" />
+            <ProgressBar witd="w-2/3" color="bg-indigo-500" html="Javascript" />
+            <ProgressBar witd="w-2/3" color="bg-indigo-400" html="React js " />
+            <ProgressBar witd="w-2/3" color="bg-indigo-300" html="Node js " />
           </div>
         </div>
       </section>
