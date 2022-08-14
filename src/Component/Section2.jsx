@@ -15,7 +15,7 @@ const Section2 = () => {
             props={{
               serviceName: "Web Developer ",
               serviceDeteles:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum vehicula sagittis. Aliquam feugiat vehicula nibh vestibulum consectetur.", color:"bg-slate-700"
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum vehicula sagittis. Aliquam feugiat vehicula nibh vestibulum consectetur.", color:"bg-stone-900"
             }}
           />
 
@@ -23,7 +23,7 @@ const Section2 = () => {
             props={{
               serviceName: "Digital marketing",
               serviceDeteles:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum vehicula sagittis. Aliquam feugiat vehicula nibh vestibulum consectetur.", color:"bg-slate-800"
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum vehicula sagittis. Aliquam feugiat vehicula nibh vestibulum consectetur.", color:"bg-stone-900"
             }}
           />
 
@@ -31,7 +31,7 @@ const Section2 = () => {
             props={{
               serviceName: "Graphic design",
               serviceDeteles:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum vehicula sagittis. Aliquam feugiat vehicula nibh vestibulum consectetur.", color:"bg-slate-900"
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum vehicula sagittis. Aliquam feugiat vehicula nibh vestibulum consectetur.", color:"bg-stone-900"
             }}
           />
         </div>

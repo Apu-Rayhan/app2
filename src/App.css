@@ -1,0 +1,84 @@
+.imgbb {
+    width: 99%;
+    height: 500px;
+    /* border: 1px solid; */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  
+  .imgCom {
+    /* border: 1px solid white; */
+    border-radius: 5px;
+    width: 22%;
+    height: 60%;
+    margin: 0px 10px;
+    background-color: rgb(28 29 29);
+    z-index: 0;
+    opacity: 0.8;
+  }
+  
+  .imgCom > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    margin-left: 115px;
+    margin-top: 25px;
+  }
+  .imgCom > h1 {
+    /* margin: auto; */
+    display: inline;
+    /* width: 39px; */
+    margin-left: 75px;
+    margin-top: 9px;
+    color: white;
+  }
+  
+  .imgCom > p {
+    text-align: center;
+    color: white;
+    width: 250px;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  
+  .icon {
+    /* border: 1px solid white; */
+    height: 40px;
+    width: 210px;
+    margin-top: 40px;
+    margin-left: 60px;
+    /* font-size: xx-large; */
+    color: aqua;
+    display: flex;
+  }
+  svg {
+    margin: 0px 10px;
+  }
+  
+  .cel {
+    width: 120px;
+    height: 120px;
+    background-color: #ff00a1bf;
+    border-radius: 100px;
+    position: relative;
+    top: -160px;
+    left: 35px;
+    /* opacity: 0.5; */
+    box-shadow: 1px 1px 25px #ff00a1bf;
+  }
+  
+  .cela {
+    width: 160px;
+    height: 160px;
+    background-color: #006aff8f;
+    border-radius: 100px;
+    position: relative;
+    top: 144px;
+    left: -85px;
+    /* opacity: 0.5; */
+    box-shadow: 1px 1px 25px #006aff8f;
+  }
