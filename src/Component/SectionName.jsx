@@ -7,8 +7,8 @@ const SectionName = (props) => {
         <div className=" bg-yellow-400 h-1 w-96"></div>
         <h1 className=" text-3xl font-bold">{props.name} </h1>
         <div className=" bg-yellow-400 h-1 w-96"></div>
-      </div>
-    </>
+        </div>
+        </>
   );
 };
 

@@ -7,6 +7,7 @@ const Section2 = () => {
     
     
     <SectionName name="Our Service"/>
+    
       <section className=" border w-full hight mt-2    ">
         <div className=" border mt-4  w-full h-20 justify-center items-center flex">
         </div>
