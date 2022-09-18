@@ -5,7 +5,9 @@
 .continer{
   border: 1px solid;
   width: 98%;
-  height: 80vh;
+  /* height: 80vh; */
+  margin: auto;
+  margin-top: 8px;
 }
 
 .mine {
