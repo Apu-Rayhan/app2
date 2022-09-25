@@ -13,6 +13,7 @@ const FakerData = () =>{
       id: id,
       first_name: firstName,
       last_name: lastName,
+      avatar:avatar,
     });
 
     employees.push({

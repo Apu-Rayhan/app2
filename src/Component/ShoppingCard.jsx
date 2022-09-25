@@ -3,15 +3,23 @@ import FakerData from "../BeciComponent/FakerData";
 
 const ShoppingCard = () => {
   const fakeData = FakerData();
-  console.log(fakeData);
+  const fname = fakeData.users;
+  console.log(fname);
   // console.log(fakeData.employees);
 
-  const avata = fakeData.employees[0].avatar;
+  // const avata = fakeData.employees[0].avatar;
   // console.log(avata)
+  // <img src={avata} alt="" srcset="" />
 
   return (
     <>
-      <img src={avata} alt="" srcset="" />
+      {fname.map((use) => (
+        <div key={use.id} className="use">
+          <img src={use.avatar} alt="not found" />
+          <h1>{use.first_name}</h1>
+          <h1>{use.last_name}</h1>
+        </div>
+      ))}
     </>
   );
 };
