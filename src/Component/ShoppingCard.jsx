@@ -13,15 +13,38 @@ const ShoppingCard = () => {
 
   return (
     <>
-      {fname.map((use) => (
-        <div key={use.id} className="use">
-          <img src={use.avatar} alt="not found" />
-          <h1>{use.first_name}</h1>
-          <h1>{use.last_name}</h1>
-        </div>
-      ))}
+      <div className="  border ">
+        <table className="border border-collapse w-10/12 m-auto ">
+          <tr>
+            <th className="border border-collapse w-1/5 ">FirstName</th>
+            <th className="border border-collapse w-1/5 ">LastNam</th>
+            <th className="border border-collapse w-2/5 ">Email</th>
+            <th className="border border-collapse ">Button</th>
+          </tr>
+          {fname.map((use)=>(
+            <tr key={use.id}>
+            <td className="border border-collapse text-center">{use.first_name}</td>
+            <td className="border border-collapse text-center">{use.last_name}</td>
+            <td className="border border-collapse text-center">{use.email}</td>
+            <td className="border border-collapse text-center"><button type="button">click</button></td>
+            </tr>
+          ))}
+          
+        </table>
+      </div>
     </>
   );
 };
 
 export default ShoppingCard;
+
+// {fname.map((use) => (
+//         <div key={use.id} className=" border justify-between bg-slate-800   ">
+//         <div className=" ">
+//           <img src={use.avatar} alt="not found" className=" rounded-full w-20 m-auto mt-5    " />
+//         </div>
+//           <h1>First Name : {use.first_name}</h1>
+//           <h1>Last Name : {use.last_name}</h1>
+//           <h1>Email : {use.email}</h1>
+//         </div>
+//       ))}

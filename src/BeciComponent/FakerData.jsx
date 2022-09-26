@@ -3,7 +3,7 @@ import { faker } from "@faker-js/faker";
 const FakerData = () =>{
   let users = [];
   let employees = [];
-  for (let id = 1; id <= 5; id++) {
+  for (let id = 1; id <= 15; id++) {
     let firstName = faker.name.firstName();
     let lastName = faker.name.lastName();
     let email = faker.internet.email();
@@ -13,6 +13,7 @@ const FakerData = () =>{
       id: id,
       first_name: firstName,
       last_name: lastName,
+      email:email,
       avatar:avatar,
     });
 
