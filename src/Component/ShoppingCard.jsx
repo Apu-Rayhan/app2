@@ -10,6 +10,8 @@ const ShoppingCard = () => {
   // const avata = fakeData.employees[0].avatar;
   // console.log(avata)
   // <img src={avata} alt="" srcset="" />
+  React.useEffect(()=>{})
+  React.useState()
 
   return (
     <>
