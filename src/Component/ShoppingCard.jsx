@@ -28,7 +28,7 @@ const ShoppingCard = () => {
             <td className="border border-collapse text-center">{use.first_name}</td>
             <td className="border border-collapse text-center">{use.last_name}</td>
             <td className="border border-collapse text-center">{use.email}</td>
-            <td className="border border-collapse text-center"><button type="button">click</button></td>
+            <td className="border border-collapse text-center"><button type="button" onClick={()=>{alert("hello")}}>click</button></td>
             </tr>
           ))}
           
