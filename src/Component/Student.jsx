@@ -41,7 +41,7 @@ const Student = () => {
       <div className=" border p-2 m-3 ">
         <h1 className=" text-center text-xl"> student list </h1>
 
-        <table className="border border-collapse w-10/12 m-auto ">
+        <table className="border border-collapse w-6/12 m-auto ">
           <tr>
             <th className="border border-collapse w-1/5 ">Name</th>
             <th className="border border-collapse w-1/5 ">Age</th>
@@ -64,23 +64,35 @@ const Student = () => {
                   <button
                     className="bg-red-900 text-black p-1 m-1 text-lg"
                     type="button"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="bg-red-900 text-black p-1 m-1 text-lg"
+                    type="button"
                     onClick={() => {
                       DeleteBtn(stu._id);
                     }}
                   >
                     Delete
                   </button>
-                  <button
-                    className="bg-red-900 text-black p-1 m-1 text-lg"
-                    type="button"
-                  >
-                    Edit
-                  </button>
                 </td>
               </tr>
             );
           })}
         </table>
+        
+        <form action="/action_page.php">
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname" />
+          <br />
+          <br />
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname" />
+          <br />
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
       </div>
     </>
   );

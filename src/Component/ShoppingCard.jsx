@@ -16,7 +16,7 @@ const ShoppingCard = () => {
   return (
     <>
       <div className="  border ">
-        <table className="border border-collapse w-10/12 m-auto ">
+        <table className="border border-collapse w-6/12 m-auto ">
           <tr>
             <th className="border border-collapse w-1/5 ">FirstName</th>
             <th className="border border-collapse w-1/5 ">LastNam</th>
