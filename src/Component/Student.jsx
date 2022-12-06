@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "./Input";
 // import {useState,useEffect} from 'react';
 import axios from "axios";
 
@@ -39,6 +40,8 @@ const Student = () => {
   return (
     <>
       <div className=" border p-2 m-3 ">
+
+      <Input/>
         <h1 className=" text-center text-xl"> student list </h1>
 
         <table className="border border-collapse w-6/12 m-auto ">
@@ -82,17 +85,7 @@ const Student = () => {
           })}
         </table>
         
-        <form action="/action_page.php">
-          <label for="fname">First name:</label>
-          <input type="text" id="fname" name="fname" />
-          <br />
-          <br />
-          <label for="lname">Last name:</label>
-          <input type="text" id="lname" name="lname" />
-          <br />
-          <br />
-          <input type="submit" value="Submit" />
-        </form>
+        
       </div>
     </>
   );
