@@ -1,30 +1,23 @@
 import React from "react";
-import Input from "./Input";
+import AddStudent from "./AddStudent";
+import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 // import {useState,useEffect} from 'react';
 import axios from "axios";
 
 const Student = () => {
   const [students, setStudents] = React.useState([]);
-  // * Create Funtoin  Fetch Api
-  const getAllStudent = async () => {
-    try {
-      const students = await axios.get("http://localhost:8080/student");
-      console.log(students.data);
-      setStudents(students.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+
   React.useEffect(() => {
-    // async function getAllStudent(){
-    //   try {
-    //     const students = await axios.get("http://localhost:8080/student")
-    //     console.log(students.data)
-    //     setStudents(students.data)
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // }
+    // * Create Funtoin  Fetch Api get request using axios with React hooks
+    const getAllStudent = async () => {
+      try {
+        const students = await axios.get("http://localhost:8080/student");
+        console.log(students.data);
+        setStudents(students.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     getAllStudent();
   }, []);
   //* Create Delete Button
@@ -40,16 +33,14 @@ const Student = () => {
   return (
     <>
       <div className=" border p-2 m-3 ">
-
-      <Input/>
+        <AddStudent />
         <h1 className=" text-center text-xl"> student list </h1>
 
-        <table className="border border-collapse w-6/12 m-auto ">
+        <table className="border w-1/3 ">
           <tr>
-            <th className="border border-collapse w-1/5 ">Name</th>
-            <th className="border border-collapse w-1/5 ">Age</th>
-            <th className="border border-collapse w-1/5 ">Role</th>
-            <th className="border border-collapse w-1/5 ">ID</th>
+            <th className="border border-collapse  ">Name</th>
+            <th className="border border-collapse  ">Age</th>
+            <th className="border border-collapse  ">Role</th>
           </tr>
           {students.map((stu, i) => {
             return (
@@ -64,28 +55,23 @@ const Student = () => {
                   {stu.role}
                 </td>
                 <td className="border border-collapse  text-center">
-                  <button
-                    className="bg-red-900 text-black p-1 m-1 text-lg"
-                    type="button"
-                  >
-                    Edit
+                  <button className=" " type="button">
+                    <AiFillEdit />
                   </button>
                   <button
-                    className="bg-red-900 text-black p-1 m-1 text-lg"
+                    className=""
                     type="button"
                     onClick={() => {
                       DeleteBtn(stu._id);
                     }}
                   >
-                    Delete
+                    <AiFillDelete />
                   </button>
                 </td>
               </tr>
             );
           })}
         </table>
-        
-        
       </div>
     </>
   );
