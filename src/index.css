@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    background-color: rgb(106, 143, 48);
+    background-color: rgb(221, 221, 221);
     /* color: white; */
     padding: 0;
     margin: 0;

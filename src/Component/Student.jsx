@@ -1,5 +1,5 @@
 import React from "react";
-import AddStudent from "./AddStudent";
+// import AddStudent from "./AddStudent";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 // import {useState,useEffect} from 'react';
 import axios from "axios";
@@ -32,11 +32,8 @@ const Student = () => {
 
   return (
     <>
-      <div className=" border p-2 m-3 ">
-        <AddStudent />
-        <h1 className=" text-center text-xl"> student list </h1>
-
-        <table className="border w-1/3 ">
+      <div className="border w-3/5 overflow-y-auto bg-slate-600   ">
+        <table className="border border-black w-full ">
           <tr>
             <th className="border border-collapse  ">Name</th>
             <th className="border border-collapse  ">Age</th>

@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+
 
 const AddStudent = () => {
   const [state, setState] = React.useState({
@@ -7,6 +9,8 @@ const AddStudent = () => {
     role: "",
   });
 
+  const [status,setStatus] = React.useState();
+
   const handleChange = (e) => {
     // setState({name: e.target.value})
     const value = e.target.value;
@@ -14,8 +18,24 @@ const AddStudent = () => {
     console.log(value);
   };
 
+  const onFormSubmit = async (e)=>{
+    // e.preventDefault()
+    window.location.reload(false)
+    try {
+      await axios.post("http://localhost:8080/student",state);
+      setStatus(true);
+    } catch (error) {
+      console.log("Something is Wrong");
+    }
+  }
+
+  if (status) {
+    return <AddStudent/>
+    
+  }
+
   return (
-    <div className="border w-96 p-3 inline-block ">
+    <div className=" bg-slate-600 w-96 p-3 inline-block m-5 ">
       <form className="    ">
         <label for="name" className=" text-lg ">Name:</label>
         <input className=" bg-transparent focus:outline-none border-b-2 border-black ml-1   "
@@ -23,7 +43,7 @@ const AddStudent = () => {
           name="name"
           id="name"
           value={state.name}
-          onChange={handleChange}
+          onChange={e=>handleChange(e)}
           placeholder=" Enter Your Name"
           required=""
         />
@@ -34,7 +54,7 @@ const AddStudent = () => {
           type="text"
           name="age"
           value={state.age}
-          onChange={handleChange}
+          onChange={e=>handleChange(e)}
           placeholder=" Enter Your Age"
           required=""
           id="age"
@@ -47,13 +67,13 @@ const AddStudent = () => {
           name="role"
           id=""
           value={state.role}
-          onChange={handleChange}
+          onChange={e=>handleChange(e)}
           placeholder=" Enter Your Role"
           required=""
         />
         <br />
         <br />
-        <input className=" bg-green-400 w-28 rounded" type="submit" value="Submit" />
+        <input className=" bg-green-400 w-28 rounded" type="submit" value="Submit" onClick={e=>onFormSubmit(e)} />
       </form>
     </div>
   );
