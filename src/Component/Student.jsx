@@ -1,7 +1,5 @@
 import React from "react";
-// import AddStudent from "./AddStudent";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
-// import {useState,useEffect} from 'react';
 import axios from "axios";
 // const client = axios.create({baseURL:"http://localhost:8080/student"});
 
@@ -20,7 +18,20 @@ const Student = () => {
         setStudents(resp)
       })
     })
-    }
+    };
+
+    // const deleteUser=(id)=>{
+    //   fetch(`http://localhost:8080/student/${id}`,{method:'DELETE'}).then((result)=>{
+    //     result.json().then((resp)=>{
+    //       console.log(resp)
+    //     })
+    //   })
+
+    //     var newstudent = students.filter((item) => {
+    //     return item._id !== id;
+    //     });
+    //     setStudents(newstudent);
+    // }
     
     // const getAllStudent = async () => {
     //   // * Create Funtoin get request using axios with React hooks
@@ -44,6 +55,8 @@ const Student = () => {
     setStudents(newstudent);
   };
 
+  console.log(students[0])
+
   return (
     <>
       <div className="border w-3/5 overflow-y-auto bg-slate-600   ">
@@ -53,17 +66,17 @@ const Student = () => {
             <th className="border border-collapse  ">Age</th>
             <th className="border border-collapse  ">Role</th>
           </tr>
-          {students.map((stu, i) => {
+          {students.map((item, index) => {
             return (
-              <tr key={i}>
+              <tr key={index}>
                 <td className="border border-collapse  text-center">
-                  {stu.name}
+                  {item.name}
                 </td>
                 <td className="border border-collapse  text-center">
-                  {stu.age}
+                  {item.age}
                 </td>
                 <td className="border border-collapse  text-center">
-                  {stu.role}
+                  {item.role}
                 </td>
                 <td className="border border-collapse  text-center">
                   <button className=" " type="button">
@@ -73,7 +86,9 @@ const Student = () => {
                     className=""
                     type="button"
                     onClick={() => {
-                      DeleteBtn(stu._id);
+                      DeleteBtn(item._id);
+                      alert(item.name)
+                      // deleteUser(item._id)
                     }}
                   >
                     <AiFillDelete />
