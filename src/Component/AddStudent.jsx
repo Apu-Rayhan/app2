@@ -15,12 +15,12 @@ const AddStudent = () => {
     // setState({name: e.target.value})
     const value = e.target.value;
     setState({ ...state, [e.target.name]: value });
-    console.log(value);
+    // console.log(value);
   };
 
   const onFormSubmit = async (e)=>{
-    // e.preventDefault()
-    window.location.reload(false)
+    e.preventDefault()
+    // window.location.reload(false)
     try {
       await axios.post("http://localhost:8080/student",state);
       setStatus(true);

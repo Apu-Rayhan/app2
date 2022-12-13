@@ -3,25 +3,39 @@ import React from "react";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 // import {useState,useEffect} from 'react';
 import axios from "axios";
+// const client = axios.create({baseURL:"http://localhost:8080/student"});
 
 const Student = () => {
   const [students, setStudents] = React.useState([]);
+  React.useEffect(()=>{
 
-  React.useEffect(() => {
-    // * Create Funtoin  Fetch Api get request using axios with React hooks
-    const getAllStudent = async () => {
-      try {
-        const students = await axios.get("http://localhost:8080/student");
-        console.log(students.data);
-        setStudents(students.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
     getAllStudent();
-  }, []);
-  //* Create Delete Button
+   },[]);
+
+    const getAllStudent = ()=>{
+      //! Get HTTP Request in React's Functional Component With Fetch API
+    fetch("http://localhost:8080/student").then((result)=>{
+      result.json().then((resp)=>{
+        console.log("result",resp)
+        setStudents(resp)
+      })
+    })
+    }
+    
+    // const getAllStudent = async () => {
+    //   // * Create Funtoin get request using axios with React hooks
+  //   try {
+  //     const students = await client.get();
+  //     console.log(students.data);
+  //     setStudents(students.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+
   const DeleteBtn = async (id) => {
+    //* Create Delete Button
     await axios.delete(`http://localhost:8080/student/${id}`);
     // *  Delete Then Relode The pages
     var newstudent = students.filter((item) => {
