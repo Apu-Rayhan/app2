@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import About from "../pages/About";
+
 
 
 const AddStudent = () => {
@@ -30,7 +32,7 @@ const AddStudent = () => {
   }
 
   if (status) {
-    return <AddStudent/>
+    return <About/>
     
   }
 

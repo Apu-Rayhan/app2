@@ -59,7 +59,7 @@ const Student = () => {
 
   return (
     <>
-      <div className="border w-3/5 overflow-y-auto bg-slate-600   ">
+      <div className="border w-2/5 overflow-y-auto bg-slate-600   ">
         <table className="border border-black w-full ">
           <tr>
             <th className="border border-collapse  ">Name</th>
@@ -98,6 +98,31 @@ const Student = () => {
             );
           })}
         </table>
+      </div>
+
+      <div className=" overflow-y-auto">
+        {students.map((item, index)=>{
+          return(
+            <div key={index} className=" flex w-96 h-28  my-3 rounded-md bg-slate-500 ">
+              <img src="" alt="kdh" srcset="" className=" border border-black w-20 h-20 rounded-full mt-3 ml-3" />
+              <div className=" w-2/5 h-20 ml-1 mt-3 ">
+              <h1> Name : {item.name} </h1>
+              <h1> Age : {item.age} </h1>
+              <h1> Role : {item.role} </h1>
+              </div>
+              <div className="  w-24 h-20 mt-3">
+              <button className=" bg-red-600 w-20 rounded-lg my-2" type="button">Edit<AiFillEdit /></button>
+              <button className=" bg-red-600 w-20 rounded-lg my-2" type="button" onClick={() => {
+                      DeleteBtn(item._id);
+                      alert(item.name)
+                      // deleteUser(item._id)
+                    }} >Delete<AiFillDelete /></button>
+              
+              </div>
+            </div>
+          )
+        })}
+
       </div>
     </>
   );

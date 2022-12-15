@@ -6,7 +6,7 @@ import AddStudent from "../Component/AddStudent";
 const About = () => {
   return (
     <>
-      <div className=" flex border border-black w-full h-96 mt-5 ">
+      <div className=" flex  border border-black w-full h-96 mt-5 ">
       <AddStudent />
       <Student />
       </div>

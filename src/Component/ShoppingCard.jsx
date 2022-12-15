@@ -34,6 +34,10 @@ const ShoppingCard = () => {
           
         </table>
       </div>
+      <div>
+      
+      
+      </div>
     </>
   );
 };
